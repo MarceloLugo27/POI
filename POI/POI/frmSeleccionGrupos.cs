@@ -127,11 +127,6 @@ namespace POI
 
         }
 
-        private void DGVSubGrupos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void pendientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListaPendientes FormListaPendientes = new frmListaPendientes();
