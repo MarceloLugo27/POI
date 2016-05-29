@@ -149,6 +149,7 @@
             this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
             this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
             this.pendientesToolStripMenuItem.Text = "Pendientes y tareas";
+            this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
             // 
             // frmSeleccionGrupos
             // 

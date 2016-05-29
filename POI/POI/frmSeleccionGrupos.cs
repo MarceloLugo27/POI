@@ -131,5 +131,11 @@ namespace POI
         {
 
         }
+
+        private void pendientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaPendientes FormListaPendientes = new frmListaPendientes();
+            FormListaPendientes.ShowDialog();
+        }
     }
 }
