@@ -124,7 +124,6 @@ namespace POI
 
             frmGrupalChatCliente.frmGrupalChatCliente FormChatGrupal = new frmGrupalChatCliente.frmGrupalChatCliente();
             FormChatGrupal.ShowDialog();
-            this.Close();
 
         }
 

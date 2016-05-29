@@ -161,6 +161,35 @@ namespace TcpClientProgram
             portTextbox.Text = cFunciones.GlobalintPuertoPrivado;
             userNameTextbox.Text = cFunciones.GlobalstrNombreUsuarioCliente;
             totextbox.Text = cFunciones.GlobalstrIdNombreClienteDestino;
+
+            if (!isConnectedToServer)
+            {
+                string connectionEstablish;
+
+                connectionEstablish = "CONNECT_REQUEST;" + userNameTextbox.Text;
+
+
+                tcpClient = new TcpClient();
+                tcpClient.Connect(serveripTextbox.Text, int.Parse(portTextbox.Text));
+                this.isConnectedToServer = true;
+
+                strWritter = new StreamWriter(tcpClient.GetStream());
+                strWritter.WriteLine(connectionEstablish);
+                strWritter.Flush();
+
+                incomingMessageHandler = new Thread(() => ReceiveMessages());
+                incomingMessageHandler.IsBackground = true;
+                incomingMessageHandler.Start();
+
+
+            }
+            if (isConnectedToServer)
+            {
+
+            }
+
+
+
         }
     }
 }

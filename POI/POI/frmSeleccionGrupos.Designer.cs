@@ -37,7 +37,10 @@
             this.DGVSubGrupos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSubGrupos)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGrupoLF
@@ -131,6 +134,22 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 3;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pendientesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // pendientesToolStripMenuItem
+            // 
+            this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
+            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.pendientesToolStripMenuItem.Text = "Pendientes y tareas";
+            // 
             // frmSeleccionGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,10 +164,14 @@
             this.Controls.Add(this.btnGrupoLCC);
             this.Controls.Add(this.btnGrupoLM);
             this.Controls.Add(this.btnGrupoLF);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmSeleccionGrupos";
             this.Text = "Seleccione un chat para acceder";
             this.Load += new System.EventHandler(this.frmSeleccionGrupos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVSubGrupos)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +188,8 @@
         private System.Windows.Forms.DataGridView DGVSubGrupos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem pendientesToolStripMenuItem;
     }
 }
 

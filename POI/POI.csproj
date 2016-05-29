@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmListaPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaPendientes.Designer.cs">
+      <DependentUpon>frmListaPendientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="POI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="POI\Funciones.cs" />
     <Compile Include="POI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmListaPendientes.resx">
+      <DependentUpon>frmListaPendientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="POI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

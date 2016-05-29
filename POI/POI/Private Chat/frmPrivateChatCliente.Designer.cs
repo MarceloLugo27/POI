@@ -64,6 +64,7 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario";
+            this.label1.Visible = false;
             // 
             // serveripTextbox
             // 
@@ -71,6 +72,7 @@
             this.serveripTextbox.Name = "serveripTextbox";
             this.serveripTextbox.Size = new System.Drawing.Size(177, 20);
             this.serveripTextbox.TabIndex = 2;
+            this.serveripTextbox.Visible = false;
             // 
             // label2
             // 
@@ -80,6 +82,7 @@
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "IP Chat server";
+            this.label2.Visible = false;
             // 
             // ConnectButton
             // 
@@ -89,6 +92,7 @@
             this.ConnectButton.TabIndex = 4;
             this.ConnectButton.Text = "Conectar";
             this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Visible = false;
             this.ConnectButton.Click += new System.EventHandler(this.ConnectButton_Click);
             // 
             // userNameTextbox
@@ -97,6 +101,7 @@
             this.userNameTextbox.Name = "userNameTextbox";
             this.userNameTextbox.Size = new System.Drawing.Size(177, 20);
             this.userNameTextbox.TabIndex = 5;
+            this.userNameTextbox.Visible = false;
             // 
             // label3
             // 
@@ -106,6 +111,7 @@
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Para:";
+            this.label3.Visible = false;
             // 
             // totextbox
             // 
@@ -113,13 +119,14 @@
             this.totextbox.Name = "totextbox";
             this.totextbox.Size = new System.Drawing.Size(283, 20);
             this.totextbox.TabIndex = 7;
+            this.totextbox.Visible = false;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.messagebodytextbox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.SendMsgButton);
-            this.groupBox1.Location = new System.Drawing.Point(22, 287);
+            this.groupBox1.Location = new System.Drawing.Point(15, 275);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(381, 78);
             this.groupBox1.TabIndex = 8;
@@ -146,7 +153,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(59, 160);
+            this.listBox1.Location = new System.Drawing.Point(56, 55);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(330, 121);
             this.listBox1.TabIndex = 9;
@@ -154,7 +161,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 144);
+            this.label5.Location = new System.Drawing.Point(53, 39);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 10;
@@ -168,6 +175,7 @@
             this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Puerto server";
+            this.label6.Visible = false;
             // 
             // portTextbox
             // 
@@ -175,12 +183,13 @@
             this.portTextbox.Name = "portTextbox";
             this.portTextbox.Size = new System.Drawing.Size(68, 20);
             this.portTextbox.TabIndex = 12;
+            this.portTextbox.Visible = false;
             // 
             // frmPrivateChatClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 377);
+            this.ClientSize = new System.Drawing.Size(837, 414);
             this.Controls.Add(this.portTextbox);
             this.Controls.Add(this.totextbox);
             this.Controls.Add(this.label6);
