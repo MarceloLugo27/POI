@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="v:\archivos de programa\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="C:\Users\Marcelo\Desktop\POI-master\POI\bin\Debug\POI.exe">
+   <Modules>
+    <Module Name="poi.exe">
+     <Namespaces>
+      <Namespace Name="frmGrupalChatCliente">
+       <Types>
+        <Type Name="frmGrupalChatCliente" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="srReceiver" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Grupal Chat\Cliente" File="frmGrupalChatCliente.designer.cs" Line="15">'frmGrupalChatCliente' contiene el campo 'frmGrupalChatCliente.srReceiver' que es de tipo IDisposable: 'StreamReader'. Cambie el método Dispose en 'frmGrupalChatCliente' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="swSender" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Grupal Chat\Cliente" File="frmGrupalChatCliente.designer.cs" Line="15">'frmGrupalChatCliente' contiene el campo 'frmGrupalChatCliente.swSender' que es de tipo IDisposable: 'StreamWriter'. Cambie el método Dispose en 'frmGrupalChatCliente' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="tcpServer" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Grupal Chat\Cliente" File="frmGrupalChatCliente.designer.cs" Line="15">'frmGrupalChatCliente' contiene el campo 'frmGrupalChatCliente.tcpServer' que es de tipo IDisposable: 'TcpClient'. Cambie el método Dispose en 'frmGrupalChatCliente' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Funciones">
+       <Types>
+        <Type Name="cFunciones" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#EnviarComandoSQL(System.String,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI" File="Funciones.cs" Line="68">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'cFunciones.EnviarComandoSQL(string, string, string, string, string, string)' podría contener las siguientes variables: 'strQuery'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EnviarComandoSQLMIServer(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI" File="Funciones.cs" Line="96">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'cFunciones.EnviarComandoSQLMIServer(string, string)' podría contener las siguientes variables: 'strQuery'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EnviarComandoSQLMIServerReturnID(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI" File="Funciones.cs" Line="161">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'cFunciones.EnviarComandoSQLMIServerReturnID(string, string)' podría contener las siguientes variables: 'strQuery'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EnviarComandoSQLReturnID(System.String,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI" File="Funciones.cs" Line="131">La cadena de consulta pasada a 'SqlCommand.CommandText.set(string)' en 'cFunciones.EnviarComandoSQLReturnID(string, string, string, string, string, string)' podría contener las siguientes variables: 'strQuery'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LlenarDatasetMiServer(System.String,System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI" File="Funciones.cs" Line="202">La cadena de consulta pasada a 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' en 'cFunciones.LlenarDatasetMiServer(string, string, string)' podría contener las siguientes variables: 'strQuery'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="POI.Properties">
+       <Types>
+        <Type Name="Resources" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="ExcludedInSource" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="TcpClientProgram">
+       <Types>
+        <Type Name="frmChatPrivadoCliente" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="strReader" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat 2" File="frmChatPrivadoCliente.Designer.cs" Line="15">'frmChatPrivadoCliente' contiene el campo 'frmChatPrivadoCliente.strReader' que es de tipo IDisposable: 'StreamReader'. Cambie el método Dispose en 'frmChatPrivadoCliente' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="strWritter" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat 2" File="frmChatPrivadoCliente.Designer.cs" Line="15">'frmChatPrivadoCliente' contiene el campo 'frmChatPrivadoCliente.strWritter' que es de tipo IDisposable: 'StreamWriter'. Cambie el método Dispose en 'frmChatPrivadoCliente' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="tcpClient" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat 2" File="frmChatPrivadoCliente.Designer.cs" Line="15">'frmChatPrivadoCliente' contiene el campo 'frmChatPrivadoCliente.tcpClient' que es de tipo IDisposable: 'TcpClient'. Cambie el método Dispose en 'frmChatPrivadoCliente' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmPrivateChatClient" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="mServer" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat1" File="frmPrivateChatCliente.Designer.cs" Line="15">'frmPrivateChatClient' contiene el campo 'frmPrivateChatClient.mServer' que es de tipo IDisposable: 'Socket'. Cambie el método Dispose en 'frmPrivateChatClient' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="socketrecibevideo" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat1" File="frmPrivateChatCliente.Designer.cs" Line="15">'frmPrivateChatClient' contiene el campo 'frmPrivateChatClient.socketrecibevideo' que es de tipo IDisposable: 'UdpClient'. Cambie el método Dispose en 'frmPrivateChatClient' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="strReader" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat1" File="frmPrivateChatCliente.Designer.cs" Line="15">'frmPrivateChatClient' contiene el campo 'frmPrivateChatClient.strReader' que es de tipo IDisposable: 'StreamReader'. Cambie el método Dispose en 'frmPrivateChatClient' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="strWritter" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat1" File="frmPrivateChatCliente.Designer.cs" Line="15">'frmPrivateChatClient' contiene el campo 'frmPrivateChatClient.strWritter' que es de tipo IDisposable: 'StreamWriter'. Cambie el método Dispose en 'frmPrivateChatClient' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="tcpClient" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat1" File="frmPrivateChatCliente.Designer.cs" Line="15">'frmPrivateChatClient' contiene el campo 'frmPrivateChatClient.tcpClient' que es de tipo IDisposable: 'TcpClient'. Cambie el método Dispose en 'frmPrivateChatClient' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="wavein" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat1" File="frmPrivateChatCliente.Designer.cs" Line="15">'frmPrivateChatClient' contiene el campo 'frmPrivateChatClient.wavein' que es de tipo IDisposable: 'WaveIn'. Cambie el método Dispose en 'frmPrivateChatClient' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+            <Message Id="waveout" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2016-05-30 13:31:46Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\Marcelo\Desktop\POI-master\POI\POI\Private Chat1" File="frmPrivateChatCliente.Designer.cs" Line="15">'frmPrivateChatClient' contiene el campo 'frmPrivateChatClient.waveout' que es de tipo IDisposable: 'WaveOut'. Cambie el método Dispose en 'frmPrivateChatClient' para que llame a Dispose o Close en este campo.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Evitar código privado al que no se llama</Name>
+   <Description>Hay código al que no se llama que no es visible externamente y no es un punto de entrada conocido del runtime. Si esta infracción da lugar a un error, envíe un informe sobre el problema al equipo de análisis de código de Visual Studio.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>Aplique Dispose a los campos a los que se pueda</Name>
+   <Description>Si un tipo que implementa IDisposable posee campos que también implementan IDisposable, la implementación de Dispose() de los tipos encapsuladores debe llamar a Dispose() en todos los campos disponibles.</Description>
+   <Resolution Name="Default">{0} contiene el campo {1} que es de tipo IDisposable: {2}. Cambie el método Dispose en {0} para que llame a Dispose o Close en este campo.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad</Name>
+   <Description>Una cadena de comando SQL compilada a partir de datos proporcionados por el usuario es vulnerable a ataques pon inyección de código SQL. Microsoft SQL Server y otros servidores de bases de datos admiten procedimientos almacenados y consultas SQL parametrizadas, que reducen el riesgo de ataques por inyección.</Description>
+   <Resolution Name="WithNonLiterals">La cadena de consulta pasada a {0} en {1} podría contener las siguientes variables: {2}. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>

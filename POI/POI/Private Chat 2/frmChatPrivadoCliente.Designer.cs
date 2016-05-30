@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.SendMsgButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.serveripTextbox = new System.Windows.Forms.TextBox();
@@ -54,6 +55,7 @@
             this.tbIP = new System.Windows.Forms.TextBox();
             this.btnEnviarVideo = new System.Windows.Forms.Button();
             this.btnDetener = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -217,6 +219,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(411, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(303, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
@@ -225,6 +228,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(411, 288);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(303, 176);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
@@ -292,6 +296,11 @@
             this.btnDetener.UseVisualStyleBackColor = true;
             this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmChatPrivadoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +362,7 @@
         private System.Windows.Forms.TextBox tbIP;
         private System.Windows.Forms.Button btnEnviarVideo;
         private System.Windows.Forms.Button btnDetener;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

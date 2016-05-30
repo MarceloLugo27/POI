@@ -92,10 +92,10 @@ namespace TcpClientProgram
         {
             string message;
 
-            
 
-            message = "SEND_MSG;" + totextbox.Text+";"+messagebodytextbox.Text;
-            listBox1.Items.Add("Tu: "+messagebodytextbox.Text.ToString());
+
+            message = "SEND_MSG;" + totextbox.Text + ";" + messagebodytextbox.Text;
+            listBox1.Items.Add("Tu: " + messagebodytextbox.Text.ToString());
 
             strWritter.WriteLine(message);
             strWritter.Flush();
@@ -107,12 +107,12 @@ namespace TcpClientProgram
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            
+
             if (!isConnectedToServer)
             {
                 string connectionEstablish;
 
-                connectionEstablish = "CONNECT_REQUEST;"+userNameTextbox.Text;
+                connectionEstablish = "CONNECT_REQUEST;" + userNameTextbox.Text;
 
 
                 tcpClient = new TcpClient();
@@ -131,7 +131,7 @@ namespace TcpClientProgram
             }
             if (isConnectedToServer)
             {
-              
+
             }
 
 
@@ -141,10 +141,10 @@ namespace TcpClientProgram
 
         private void ReceiveMessages()
         {
-         
+
 
             strReader = new StreamReader(this.tcpClient.GetStream());
-           
+
             // While we are successfully connected, read incoming lines from the server
             while (this.isConnectedToServer)
             {
@@ -155,7 +155,7 @@ namespace TcpClientProgram
                 {
                     string source = data[1];
                     string message = data[2];
-                    setClientMessage(source+" dice:"+" "+message);
+                    setClientMessage(source + " dice:" + " " + message);
                 }
 
                 if (data[0].Equals("INCOMING_BUZZ"))
@@ -311,7 +311,7 @@ namespace TcpClientProgram
 
         private void btnEnviarVideo_Click(object sender, EventArgs e)
         {
-            backgroundWorker2.RunWorkerAsync();
+            timer1.Start();
         }
 
         private void btnDetener_Click(object sender, EventArgs e)
@@ -319,6 +319,20 @@ namespace TcpClientProgram
             backgroundWorker1.CancelAsync();
             backgroundWorker2.CancelAsync();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            UdpClient tempSocket = new UdpClient();
+
+            if (tbIP.Text != "")
+            {
+                Byte[] sendBytes = imageToByteArray(imagen);
+                IPEndPoint tempipep = new IPEndPoint(IPAddress.Parse(tbIP.Text), 12446);
+                tempSocket.Connect(tempipep);
+                tempSocket.Send(sendBytes, sendBytes.Length);
+            }
+        }
+
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -337,5 +351,6 @@ namespace TcpClientProgram
 
                 pictureBox1.Image = imagen2;
             }
+        }
     }
 }
