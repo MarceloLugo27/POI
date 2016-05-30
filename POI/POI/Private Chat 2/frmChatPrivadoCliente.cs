@@ -17,6 +17,7 @@ using AForge.Video.DirectShow;
 using NAudio.Wave;
 using NAudio.CoreAudioApi;
 using Funciones;
+using System.Drawing.Imaging;
 
 namespace TcpClientProgram
 
@@ -29,12 +30,31 @@ namespace TcpClientProgram
         private StreamReader strReader;
         private Thread incomingMessageHandler;
 
+        UdpClient vcliente;
+        private FilterInfoCollection webcam;
+        private VideoCaptureDevice cam;
+        //UdpClient sckRecive = new UdpClient(9050);
+        Byte[] recives;
+        Image imagen, imagen2;
+
         public frmChatPrivadoCliente()
         {
             InitializeComponent();
         }
 
-       
+        public Image byteArrayToImage(Byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }   //CONVIERTE EL BYTE[] A IMAGEN
+
+        public Byte[] imageToByteArray(Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, ImageFormat.Jpeg);
+            return ms.ToArray();
+        }
 
         void getResponse()
         {
@@ -181,6 +201,8 @@ namespace TcpClientProgram
 
         private void frmChatPrivadoCliente_Load(object sender, EventArgs e)
         {
+
+
             CheckForIllegalCrossThreadCalls = false;
 
             string strqry = "SELECT strDireccionIP, intPuerto FROM tblSubGrupo WHERE IDGrupo = 7";
@@ -192,6 +214,17 @@ namespace TcpClientProgram
             portTextbox.Text = cFunciones.GlobalintPuertoPrivado;
             userNameTextbox.Text = cFunciones.GlobalstrNombreUsuarioCliente;
             totextbox.Text = cFunciones.GlobalstrNombreClienteDestino;
+            tbIP.Text = cFunciones.GlobalstrDireccionIPDestino;
+
+            webcam = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
+            foreach (FilterInfo videocapturedevice in webcam)
+            {
+
+                cbCamaras.Items.Add(videocapturedevice.MonikerString);
+            }
+
+            cbCamaras.SelectedIndex = 0;
 
             this.Text = "Chat de " + cFunciones.GlobalstrNombreUsuarioCliente + " a " + cFunciones.GlobalstrNombreClienteDestino;
 
@@ -233,5 +266,76 @@ namespace TcpClientProgram
 
 
         }
+
+        void cam_NewFrame(object sender, NewFrameEventArgs eventargs)
+        {
+
+            Bitmap bit = (Bitmap)eventargs.Frame.Clone();
+            pictureBox2.Image = bit;
+
+            if (pictureBox2.Image != null)
+            {
+                imagen = bit;
+
+            }
+        }
+
+        private void btnRecibirVideo_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.RunWorkerAsync();
+        }
+
+        private void btnEncender_Click(object sender, EventArgs e)
+        {
+            cam = new VideoCaptureDevice(webcam[cbCamaras.SelectedIndex].MonikerString);
+            cam.NewFrame += new NewFrameEventHandler(cam_NewFrame);
+            cam.Start();
+        }
+
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
+            UdpClient tempSocket = new UdpClient();
+
+
+            if (tbIP.Text != "")
+            {
+
+
+                Byte[] sendBytes = imageToByteArray(imagen);
+                IPEndPoint tempipep = new IPEndPoint(IPAddress.Parse(tbIP.Text), 12446);
+                tempSocket.Connect(tempipep);
+                tempSocket.Send(sendBytes, sendBytes.Length);
+
+            }
+        }
+
+        private void btnEnviarVideo_Click(object sender, EventArgs e)
+        {
+            backgroundWorker2.RunWorkerAsync();
+        }
+
+        private void btnDetener_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.CancelAsync();
+            backgroundWorker2.CancelAsync();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            UdpClient tempSocket2 = new UdpClient(12446);
+
+            while (true)
+            {
+                IPEndPoint tempipep = new IPEndPoint(IPAddress.Any, 0);
+
+                EndPoint temip = (EndPoint)tempipep;
+
+
+                byte[] recivesImage = tempSocket2.Receive(ref tempipep);
+
+                imagen2 = byteArrayToImage(recivesImage);
+
+                pictureBox1.Image = imagen2;
+            }
     }
 }
