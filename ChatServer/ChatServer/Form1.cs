@@ -75,8 +75,8 @@ namespace ChatServer
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            tbDireccionIP.Text = GetLocalIPv4(NetworkInterfaceType.Ethernet);
-            //tbDireccionIP.Text = GetLocalIPv4(NetworkInterfaceType.Wireless80211);
+            //tbDireccionIP.Text = GetLocalIPv4(NetworkInterfaceType.Ethernet);
+            tbDireccionIP.Text = GetLocalIPv4(NetworkInterfaceType.Wireless80211);
 
 
         }
