@@ -1,0 +1,3 @@
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClient.Form1.resources
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClient.Properties.Resources.resources
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClient.csproj.GenerateResource.Cache

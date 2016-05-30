@@ -1,0 +1,38 @@
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Form1.resources
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.csproj.GenerateResource.Cache
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\bin\Debug\TcpClient.exe
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\bin\Debug\TcpClient.pdb
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Properties.Resources.resources
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClient.exe
+C:\Users\Apple\documents\visual studio 2010\Projects\TcpServer\TcpClient\obj\x86\Debug\TcpClient.pdb
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\bin\Debug\TcpClient.exe
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\bin\Debug\TcpClient.pdb
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Form1.resources
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Properties.Resources.resources
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\obj\x86\Debug\TcpClient.exe
+C:\Users\Student\Desktop\Project\Project\TcpServer\TcpClient\obj\x86\Debug\TcpClient.pdb
+C:\Users\Marcelo Lugo\Desktop\TcpServer\TcpServer\TcpClient\bin\Debug\TcpClient.exe
+C:\Users\Marcelo Lugo\Desktop\TcpServer\TcpServer\TcpClient\bin\Debug\TcpClient.pdb
+C:\Users\Marcelo Lugo\Desktop\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Form1.resources
+C:\Users\Marcelo Lugo\Desktop\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Properties.Resources.resources
+C:\Users\Marcelo Lugo\Desktop\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.csproj.GenerateResource.Cache
+C:\Users\Marcelo Lugo\Desktop\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.exe
+C:\Users\Marcelo Lugo\Desktop\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.pdb
+E:\POI CD\TcpServer\TcpServer\TcpClient\bin\Debug\TcpClient.exe
+E:\POI CD\TcpServer\TcpServer\TcpClient\bin\Debug\TcpClient.pdb
+E:\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Form1.resources
+E:\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Properties.Resources.resources
+E:\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.csproj.GenerateResource.Cache
+E:\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.exe
+E:\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.pdb
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.exe
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.pdb
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\bin\Debug\TcpClient.exe
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\bin\Debug\TcpClient.pdb
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Form1.resources
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Properties.Resources.resources
+C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.csproj.GenerateResource.Cache
