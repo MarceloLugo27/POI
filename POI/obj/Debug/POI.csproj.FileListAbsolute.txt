@@ -20,3 +20,9 @@ C:\Users\Marcelo\Desktop\POI-master\POI\obj\Debug\POI.pdb
 C:\Users\Marcelo\Desktop\POI-master\POI\obj\Debug\TcpClientProgram.frmChatPrivadoCliente.resources
 C:\Users\Marcelo\Desktop\POI-master\POI\bin\Debug\POI.exe.CodeAnalysisLog.xml
 C:\Users\Marcelo\Desktop\POI-master\POI\bin\Debug\POI.exe.lastcodeanalysissucceeded
+C:\Users\Marcelo Lugo\Source\Repos\POI\POI\bin\Debug\POI.exe.config
+C:\Users\Marcelo Lugo\Source\Repos\POI\POI\obj\Debug\POI.exe
+C:\Users\Marcelo Lugo\Source\Repos\POI\POI\obj\Debug\POI.pdb
+C:\Users\Marcelo Lugo\Desktop\POI CD\POI\POI\bin\Debug\POI.exe.config
+C:\Users\Marcelo Lugo\Desktop\POI CD\POI\POI\obj\Debug\POI.exe
+C:\Users\Marcelo Lugo\Desktop\POI CD\POI\POI\obj\Debug\POI.pdb
