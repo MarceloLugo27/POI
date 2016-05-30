@@ -128,11 +128,27 @@ namespace TcpServer
                     StreamWriter wr = new StreamWriter(desStream);
                     wr.WriteLine(client_chat);
                     wr.Flush();
-
-
-
-
                 }
+
+                if (response[0] == "SEND_BUZZ")
+                {
+                    string to = response[1];
+                    string msgBody = response[2];
+
+                    User source = this.TcpClients.Where(c => c.TcpClient.Equals(this_client)).Select(c => c).FirstOrDefault();
+                    User destination = this.TcpClients.Where(c => c.UserName == to).Select(c => c).FirstOrDefault();
+
+
+                    string client_chat;
+                    client_chat = "INCOMING_BUZZ;" + source.UserName + ";" + msgBody;
+
+                    Stream desStream = destination.TcpClient.GetStream();
+
+                    StreamWriter wr = new StreamWriter(desStream);
+                    wr.WriteLine(client_chat);
+                    wr.Flush();
+                }
+
 
 
             }
