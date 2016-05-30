@@ -45,7 +45,7 @@
             // 
             // btnGrupoLF
             // 
-            this.btnGrupoLF.Location = new System.Drawing.Point(39, 37);
+            this.btnGrupoLF.Location = new System.Drawing.Point(35, 60);
             this.btnGrupoLF.Name = "btnGrupoLF";
             this.btnGrupoLF.Size = new System.Drawing.Size(200, 75);
             this.btnGrupoLF.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // btnGrupoLM
             // 
-            this.btnGrupoLM.Location = new System.Drawing.Point(39, 118);
+            this.btnGrupoLM.Location = new System.Drawing.Point(35, 141);
             this.btnGrupoLM.Name = "btnGrupoLM";
             this.btnGrupoLM.Size = new System.Drawing.Size(200, 75);
             this.btnGrupoLM.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             // btnGrupoLCC
             // 
-            this.btnGrupoLCC.Location = new System.Drawing.Point(39, 280);
+            this.btnGrupoLCC.Location = new System.Drawing.Point(35, 303);
             this.btnGrupoLCC.Name = "btnGrupoLCC";
             this.btnGrupoLCC.Size = new System.Drawing.Size(200, 75);
             this.btnGrupoLCC.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             // btnGrupoLA
             // 
-            this.btnGrupoLA.Location = new System.Drawing.Point(39, 199);
+            this.btnGrupoLA.Location = new System.Drawing.Point(35, 222);
             this.btnGrupoLA.Name = "btnGrupoLA";
             this.btnGrupoLA.Size = new System.Drawing.Size(200, 75);
             this.btnGrupoLA.TabIndex = 0;
@@ -85,7 +85,7 @@
             // 
             // btnGrupoLMAD
             // 
-            this.btnGrupoLMAD.Location = new System.Drawing.Point(39, 361);
+            this.btnGrupoLMAD.Location = new System.Drawing.Point(35, 384);
             this.btnGrupoLMAD.Name = "btnGrupoLMAD";
             this.btnGrupoLMAD.Size = new System.Drawing.Size(200, 75);
             this.btnGrupoLMAD.TabIndex = 0;
@@ -95,7 +95,7 @@
             // 
             // btnGrupoLSTI
             // 
-            this.btnGrupoLSTI.Location = new System.Drawing.Point(39, 442);
+            this.btnGrupoLSTI.Location = new System.Drawing.Point(35, 465);
             this.btnGrupoLSTI.Name = "btnGrupoLSTI";
             this.btnGrupoLSTI.Size = new System.Drawing.Size(200, 75);
             this.btnGrupoLSTI.TabIndex = 0;
@@ -109,19 +109,18 @@
             this.DGVSubGrupos.AllowUserToDeleteRows = false;
             this.DGVSubGrupos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.DGVSubGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVSubGrupos.Location = new System.Drawing.Point(345, 37);
+            this.DGVSubGrupos.Location = new System.Drawing.Point(341, 60);
             this.DGVSubGrupos.Name = "DGVSubGrupos";
             this.DGVSubGrupos.ReadOnly = true;
             this.DGVSubGrupos.RowHeadersVisible = false;
             this.DGVSubGrupos.Size = new System.Drawing.Size(200, 480);
             this.DGVSubGrupos.TabIndex = 1;
             this.DGVSubGrupos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVSubGrupos_CellClick);
-            this.DGVSubGrupos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVSubGrupos_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 18);
+            this.label1.Location = new System.Drawing.Point(341, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 2;
@@ -129,7 +128,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 18);
+            this.label2.Location = new System.Drawing.Point(35, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 3;

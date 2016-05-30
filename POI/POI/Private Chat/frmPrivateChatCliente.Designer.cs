@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.SendMsgButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.serveripTextbox = new System.Windows.Forms.TextBox();
@@ -43,7 +44,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.portTextbox = new System.Windows.Forms.TextBox();
+            this.pbReceptor = new System.Windows.Forms.PictureBox();
+            this.pbEmisor = new System.Windows.Forms.PictureBox();
+            this.btnSeleccionarCamara = new System.Windows.Forms.Button();
+            this.btnIniciar = new System.Windows.Forms.Button();
+            this.cbCamaras = new System.Windows.Forms.ComboBox();
+            this.timer1_stream = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReceptor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmisor)).BeginInit();
             this.SuspendLayout();
             // 
             // SendMsgButton
@@ -126,7 +135,7 @@
             this.groupBox1.Controls.Add(this.messagebodytextbox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.SendMsgButton);
-            this.groupBox1.Location = new System.Drawing.Point(15, 275);
+            this.groupBox1.Location = new System.Drawing.Point(15, 346);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(381, 78);
             this.groupBox1.TabIndex = 8;
@@ -185,11 +194,65 @@
             this.portTextbox.TabIndex = 12;
             this.portTextbox.Visible = false;
             // 
+            // pbReceptor
+            // 
+            this.pbReceptor.Location = new System.Drawing.Point(506, 12);
+            this.pbReceptor.Name = "pbReceptor";
+            this.pbReceptor.Size = new System.Drawing.Size(266, 183);
+            this.pbReceptor.TabIndex = 13;
+            this.pbReceptor.TabStop = false;
+            // 
+            // pbEmisor
+            // 
+            this.pbEmisor.Location = new System.Drawing.Point(506, 255);
+            this.pbEmisor.Name = "pbEmisor";
+            this.pbEmisor.Size = new System.Drawing.Size(266, 183);
+            this.pbEmisor.TabIndex = 13;
+            this.pbEmisor.TabStop = false;
+            // 
+            // btnSeleccionarCamara
+            // 
+            this.btnSeleccionarCamara.Location = new System.Drawing.Point(616, 215);
+            this.btnSeleccionarCamara.Name = "btnSeleccionarCamara";
+            this.btnSeleccionarCamara.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionarCamara.TabIndex = 14;
+            this.btnSeleccionarCamara.Text = "Seleccionar cámara";
+            this.btnSeleccionarCamara.UseVisualStyleBackColor = true;
+            this.btnSeleccionarCamara.Click += new System.EventHandler(this.btnSeleccionarCamara_Click);
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Location = new System.Drawing.Point(697, 215);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.TabIndex = 15;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // cbCamaras
+            // 
+            this.cbCamaras.FormattingEnabled = true;
+            this.cbCamaras.Location = new System.Drawing.Point(506, 216);
+            this.cbCamaras.Name = "cbCamaras";
+            this.cbCamaras.Size = new System.Drawing.Size(104, 21);
+            this.cbCamaras.TabIndex = 16;
+            // 
+            // timer1_stream
+            // 
+            this.timer1_stream.Interval = 1;
+            this.timer1_stream.Tick += new System.EventHandler(this.timer1_stream_Tick);
+            // 
             // frmPrivateChatClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 414);
+            this.ClientSize = new System.Drawing.Size(837, 450);
+            this.Controls.Add(this.cbCamaras);
+            this.Controls.Add(this.btnIniciar);
+            this.Controls.Add(this.btnSeleccionarCamara);
+            this.Controls.Add(this.pbEmisor);
+            this.Controls.Add(this.pbReceptor);
             this.Controls.Add(this.portTextbox);
             this.Controls.Add(this.totextbox);
             this.Controls.Add(this.label6);
@@ -207,6 +270,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReceptor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmisor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,6 +294,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox portTextbox;
+        private System.Windows.Forms.PictureBox pbReceptor;
+        private System.Windows.Forms.PictureBox pbEmisor;
+        private System.Windows.Forms.Button btnSeleccionarCamara;
+        private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.ComboBox cbCamaras;
+        private System.Windows.Forms.Timer timer1_stream;
     }
 }
 
