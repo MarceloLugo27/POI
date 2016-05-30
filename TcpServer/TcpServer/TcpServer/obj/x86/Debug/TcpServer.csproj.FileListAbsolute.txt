@@ -38,3 +38,11 @@ C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpServer\obj\x86\Debug
 C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.Form1.resources
 C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.Properties.Resources.resources
 C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.csproj.GenerateResource.Cache
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.exe
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.pdb
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\bin\Debug\TcpServer.exe
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\bin\Debug\TcpServer.pdb
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.csprojResolveAssemblyReference.cache
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.Form1.resources
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.Properties.Resources.resources
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpServer\obj\x86\Debug\TcpServer.csproj.GenerateResource.Cache

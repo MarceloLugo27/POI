@@ -36,7 +36,7 @@ namespace Funciones
 
 
 
-        public static string GlobalstrServerDB = @"MSLSERVER\MSL";
+        public static string GlobalstrServerDB = @"MSL\MSL";
         public static string GlobalstrNombreDB = @"dbPOI";
         public static string GlobalstrUsernameDB = "sa";
         public static string GlobalstrPasswordDB = "marcelo1234";

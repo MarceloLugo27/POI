@@ -36,3 +36,5 @@ C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug
 C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Form1.resources
 C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.Properties.Resources.resources
 C:\Users\Marcelo Lugo\Desktop\POI CD\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClientProgram.csproj.GenerateResource.Cache
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.exe
+C:\Users\Marcelo\Desktop\POI-master\TcpServer\TcpServer\TcpClient\obj\x86\Debug\TcpClient.pdb
