@@ -57,6 +57,21 @@ namespace TcpClientProgram
             return ms.ToArray();
         }       //CONVIERTE LA IMAGEN A BYTE[]
 
+        public Image byteArrayToImage(Byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }   //CONVIERTE EL BYTE[] A IMAGEN
+
+        public void CargarDispositivos(FilterInfoCollection Dispositivos)
+        {
+            for (int i = 0; i < Dispositivos.Count; i++) ;
+
+            cbCamaras.Items.Add(Dispositivos[0].Name.ToString());
+            cbCamaras.Text = cbCamaras.Items[0].ToString();
+        }
+
 
         //void CreateEmoticons()
         //{
@@ -181,10 +196,75 @@ namespace TcpClientProgram
             }
         }
 
+        public void BuscarDispositivos()
+        {
+            try
+            {
+                DispositivoDeVideo = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+                if (DispositivoDeVideo.Count == 0)
+                {
+                    ExisteDispositivo = false;
+                }
+                else
+                {
+                    ExisteDispositivo = true;
+                    CargarDispositivos(DispositivoDeVideo);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No tienes cámara");
+            }
+        }
+
+        public void ReceiveStream(Byte[] byteImg)
+        {
+            if (haystreaming == true)
+            {
+                imgchat = byteArrayToImage(byteImg);
+                pbReceptor.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbReceptor.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbReceptor.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbReceptor.Image = imgchat;
+            }
+        }           //RECIBE EL ARREGLO DE BYTES Y LO CONVIERTE A IMAGEN, LA CUAL SE PASA AL PICTUREBOX QUE MUESTRA AL OTRO USUARIO
+
+        public void GetStream()
+        {
+            isAliveThread = true;
+            while (isAliveThread)
+            {
+                while (startstream)     //SI HAY UN STREAMING, RECIBE LA IMAGEN COMO ARREGLO DE BYTES
+                {
+                    Byte[] receiveBytes = socketrecibevideo.Receive(ref ipe);
+                    ReceiveStream(receiveBytes);
+                }
+            }
+            isAliveThread = false;
+
+        }       //FUNCIÓN DEL HILO QUE CHECA SI HAY UN STREAMING ACTIVO
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
+
             CheckForIllegalCrossThreadCalls = false;
+
+            Recibir = new Thread(new ThreadStart(GetStream));
+            Recibir.Start();
+
+            BuscarDispositivos();
+
+
+            //char[] delimiterChars = { ':' };
+            //string[] words = ipContacto.Split(delimiterChars);
+
+            //ipa = IPAddress.Parse(words[0]);
+
+            //Revisar esta wea para que reciba la IP del destino, creo
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(cFunciones.GlobalstrDireccionIPDestino), 12446);
+            socketrecibevideo = new UdpClient(12447);
 
             string strqry = "SELECT strDireccionIP, intPuerto FROM tblSubGrupo WHERE IDGrupo = 7";
             DataSet dsChatPrivado = cFunciones.LlenarDatasetMiServer(strqry, "Chat", "");
