@@ -1,0 +1,31 @@
+Bitmap f1 = new Bitmap("C:\\imagenes\\cara.jpg");
+            Bitmap f2 = new Bitmap("C:\\imagenes\\cara2.jpg");
+            Bitmap f3 = new Bitmap("C:\\imagenes\\cara3.jpg");
+            Bitmap f4 = new Bitmap("C:\\imagenes\\cara4.jpg");
+            Bitmap f5 = new Bitmap("C:\\imagenes\\cara5.jpg");
+            Bitmap f6 = new Bitmap("C:\\imagenes\\cara6.jpg");
+            Bitmap f7 = new Bitmap("C:\\imagenes\\cara7.jpg");
+            Bitmap f8 = new Bitmap("C:\\imagenes\\corazon.jpg");
+            Bitmap f9 = new Bitmap("C:\\imagenes\\Kappa.jpg");
+            Bitmap f10 = new Bitmap("C:\\imagenes\\KappaRoss.jpg");
+            Bitmap f11 = new Bitmap("C:\\imagenes\\BibbleThump.jpg");
+            Bitmap f12 = new Bitmap("C:\\imagenes\\ResidentSleeper.jpg");
+            Bitmap f13 = new Bitmap("C:\\imagenes\\rip.jpg");
+            Bitmap f14 = new Bitmap("C:\\imagenes\\deilluminati.jpg");  
+
+            emoticonos = new Hashtable(16);
+
+            emoticonos.Add(":D", f1);
+            emoticonos.Add(":/", f2);
+            emoticonos.Add(":o", f3);
+            emoticonos.Add(";)", f4);
+            emoticonos.Add(":c", f5);
+            emoticonos.Add(":p", f6);
+            emoticonos.Add(":)", f7);
+            emoticonos.Add("<3", f8);
+            emoticonos.Add("Kappa", f9);
+            emoticonos.Add("KappaRoss", f10);
+            emoticonos.Add("BibbleThump", f11);
+            emoticonos.Add("ResidentSleeper", f12);
+            emoticonos.Add("Riperoni", f13);
+            emoticonos.Add("DeIlluminati", f12);

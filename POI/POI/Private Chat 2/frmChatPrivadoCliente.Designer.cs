@@ -42,7 +42,7 @@
             this.messagebodytextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.portTextbox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,6 +59,8 @@
             this.btnAdjuntar = new System.Windows.Forms.Button();
             this.lblArchivoAdjunto = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.rtbChat = new System.Windows.Forms.RichTextBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -139,11 +141,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rtbChat);
             this.groupBox1.Controls.Add(this.btnZumbido);
             this.groupBox1.Controls.Add(this.messagebodytextbox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.listBox);
             this.groupBox1.Controls.Add(this.SendMsgButton);
             this.groupBox1.Controls.Add(this.totextbox);
             this.groupBox1.Controls.Add(this.label3);
@@ -191,13 +194,13 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Conversación:";
             // 
-            // listBox1
+            // listBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(9, 35);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(330, 121);
-            this.listBox1.TabIndex = 9;
+            this.listBox.FormattingEnabled = true;
+            this.listBox.Location = new System.Drawing.Point(9, 35);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(330, 121);
+            this.listBox.TabIndex = 9;
             // 
             // label6
             // 
@@ -327,6 +330,18 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // rtbChat
+            // 
+            this.rtbChat.Location = new System.Drawing.Point(9, 35);
+            this.rtbChat.Name = "rtbChat";
+            this.rtbChat.Size = new System.Drawing.Size(330, 122);
+            this.rtbChat.TabIndex = 12;
+            this.rtbChat.Text = "";
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // frmChatPrivadoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,7 +390,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox messagebodytextbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox portTextbox;
@@ -394,6 +409,8 @@
         private System.Windows.Forms.Button btnAdjuntar;
         private System.Windows.Forms.Label lblArchivoAdjunto;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.RichTextBox rtbChat;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

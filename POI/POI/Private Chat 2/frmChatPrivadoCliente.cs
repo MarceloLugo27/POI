@@ -31,6 +31,9 @@ namespace TcpClientProgram
         private StreamReader strReader;
         private Thread incomingMessageHandler;
 
+
+        Hashtable emoticonos;
+
         UdpClient vcliente;
         private FilterInfoCollection webcam;
         private VideoCaptureDevice cam;
@@ -58,6 +61,41 @@ namespace TcpClientProgram
             return ms.ToArray();
         }
 
+        public void CrearEmoticones()
+        {
+            Bitmap f1 = new Bitmap("\\imagenes\\cara.png");
+            Bitmap f2 = new Bitmap("\\imagenes\\cara2.png");
+            Bitmap f3 = new Bitmap("\\imagenes\\cara3.png");
+            Bitmap f4 = new Bitmap("\\imagenes\\cara4.png");
+            Bitmap f5 = new Bitmap("\\imagenes\\cara5.png");
+            Bitmap f6 = new Bitmap("\\imagenes\\cara6.png");
+            Bitmap f7 = new Bitmap("\\imagenes\\cara7.png");
+            Bitmap f8 = new Bitmap("\\imagenes\\corazon.png");
+            Bitmap f9 = new Bitmap("\\imagenes\\Kappa.png");
+            Bitmap f10 = new Bitmap("\\imagenes\\KappaRoss.png");
+            Bitmap f11 = new Bitmap("\\imagenes\\BibbleThump.png");
+            Bitmap f12 = new Bitmap("\\imagenes\\ResidentSleeper.png");
+            Bitmap f13 = new Bitmap("\\imagenes\\rip.png");
+            Bitmap f14 = new Bitmap("\\imagenes\\deilluminati.png");
+
+            emoticonos = new Hashtable(16);
+
+            emoticonos.Add(":D", f1);
+            emoticonos.Add(":/", f2);
+            emoticonos.Add(":o", f3);
+            emoticonos.Add(";)", f4);
+            emoticonos.Add(":c", f5);
+            emoticonos.Add(":p", f6);
+            emoticonos.Add(":)", f7);
+            emoticonos.Add("<3", f8);
+            emoticonos.Add("Kappa", f9);
+            emoticonos.Add("KappaRoss", f10);
+            emoticonos.Add("BibbleThump", f11);
+            emoticonos.Add("ResidentSleeper", f12);
+            emoticonos.Add("Riperoni", f13);
+            emoticonos.Add("DeIlluminati", f12);
+        }
+
         void getResponse()
         {
             Stream stm = tcpClient.GetStream();
@@ -76,12 +114,15 @@ namespace TcpClientProgram
         }
 
 
+
+
         void setClientMessage(string msg)
         {
 
             if (!InvokeRequired)
             {
-                listBox1.Items.Add(msg.ToString());
+                //listBox.Items.Add(msg.ToString());
+                rtbChat.AppendText(msg.ToString() + "\n");
 
             }
             else
@@ -90,14 +131,34 @@ namespace TcpClientProgram
             }
         }
 
+        public void AgregarEmoticon()
+        {
+            foreach (string emoticon in emoticonos.Keys)
+            {
+                while (rtbChat.Text.Contains(emoticon))
+                {
+                    int ind = rtbChat.Text.IndexOf(emoticon);
+                    rtbChat.Select(ind, emoticon.Length);
+
+
+                    Clipboard.SetImage((Image)emoticonos[emoticon]);
+                    rtbChat.Paste();
+                }
+
+            }
+        }
+
         private void SendMsgButton_Click(object sender, EventArgs e)
         {
             string message;
 
-
+            
 
             message = "SEND_MSG;" + totextbox.Text + ";" + messagebodytextbox.Text;
-            listBox1.Items.Add("Tu: " + messagebodytextbox.Text.ToString());
+            //listBox.Items.Add("Tu: " + messagebodytextbox.Text.ToString());
+            rtbChat.AppendText("Tu: " + messagebodytextbox.Text.ToString() + "\n");
+
+            AgregarEmoticon();
 
             strWritter.WriteLine(message);
             strWritter.Flush();
@@ -207,6 +268,10 @@ namespace TcpClientProgram
 
             CheckForIllegalCrossThreadCalls = false;
 
+            CrearEmoticones();
+
+            timer1.Start();
+
             string strqry = "SELECT strDireccionIP, intPuerto FROM tblSubGrupo WHERE IDGrupo = 7";
             DataSet dsChatPrivado = cFunciones.LlenarDatasetMiServer(strqry, "Chat", "");
             cFunciones.GlobalstrIPChatPrivado = dsChatPrivado.Tables[0].Rows[0][0].ToString();
@@ -226,7 +291,7 @@ namespace TcpClientProgram
                 cbCamaras.Items.Add(videocapturedevice.MonikerString);
             }
 
-            cbCamaras.SelectedIndex = 0;
+            //cbCamaras.SelectedIndex = 0;
 
             this.Text = "Chat de " + cFunciones.GlobalstrNombreUsuarioCliente + " a " + cFunciones.GlobalstrNombreClienteDestino;
 
@@ -383,6 +448,11 @@ namespace TcpClientProgram
             lblArchivoAdjunto.Text = "Archivo:" + path;
 
             sendMail("d_r_dedoverde@hotmail.com", "Proyecto POI", path);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            AgregarEmoticon();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)

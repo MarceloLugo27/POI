@@ -148,7 +148,37 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="imagenes\Nueva carpeta\" />
     <Folder Include="POI\Grupal Chat\Servidor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imagenes\BibbleThump.png" />
+    <Content Include="imagenes\cara.png" />
+    <Content Include="imagenes\cara2.png" />
+    <Content Include="imagenes\cara3.png" />
+    <Content Include="imagenes\cara4.png" />
+    <Content Include="imagenes\cara5.png" />
+    <Content Include="imagenes\cara6.png" />
+    <Content Include="imagenes\cara7.png" />
+    <Content Include="imagenes\codigo.txt" />
+    <Content Include="imagenes\corazon.png" />
+    <Content Include="imagenes\deilluminati.png" />
+    <Content Include="imagenes\face1.jpg" />
+    <Content Include="imagenes\face10.jpg" />
+    <Content Include="imagenes\face11.jpg" />
+    <Content Include="imagenes\face12.jpg" />
+    <Content Include="imagenes\face2.jpg" />
+    <Content Include="imagenes\face3.jpg" />
+    <Content Include="imagenes\face4.jpg" />
+    <Content Include="imagenes\face5.jpg" />
+    <Content Include="imagenes\face6.jpg" />
+    <Content Include="imagenes\face7.jpg" />
+    <Content Include="imagenes\face8.jpg" />
+    <Content Include="imagenes\face9.jpg" />
+    <Content Include="imagenes\Kappa.png" />
+    <Content Include="imagenes\KappaRoss.png" />
+    <Content Include="imagenes\ResidentSleeper.png" />
+    <Content Include="imagenes\rip.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
