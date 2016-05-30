@@ -29,7 +29,7 @@ namespace Funciones
         public static string GlobalstrEmailUsuarioCliente;
 
         public static int GlobalintIDUsuarioDestino;
-        public static string GlobalstrIdNombreClienteDestino;
+        public static string GlobalstrNombreClienteDestino;
         public static string GlobalstrDireccionIPDestino;
         public static string GlobalstrEmailUsuarioDestino;
 

@@ -262,7 +262,7 @@ namespace frmGrupalChatCliente
 
         private void DGVUsuariosConectados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cFunciones.GlobalstrIdNombreClienteDestino = DGVUsuariosConectados.Rows[e.RowIndex].Cells[0].Value.ToString();
+            cFunciones.GlobalstrNombreClienteDestino = DGVUsuariosConectados.Rows[e.RowIndex].Cells[0].Value.ToString();
             cFunciones.GlobalstrDireccionIPDestino = DGVUsuariosConectados.Rows[e.RowIndex].Cells[2].Value.ToString();
             cFunciones.GlobalstrEmailUsuarioDestino = DGVUsuariosConectados.Rows[e.RowIndex].Cells[3].Value.ToString();
             DGVUsuariosConectados.Columns[2].Visible = false;
@@ -271,8 +271,8 @@ namespace frmGrupalChatCliente
             //frmGrupalChatCliente.frmGrupalChatCliente FormChatGrupal = new frmGrupalChatCliente.frmGrupalChatCliente();
             //FormChatGrupal.ShowDialog();
 
-            TcpClientProgram.frmPrivateChatClient FormCharPrivado = new TcpClientProgram.frmPrivateChatClient();
-            FormCharPrivado.ShowDialog();
+            TcpClientProgram.frmChatPrivadoCliente FormCharPrivado = new TcpClientProgram.frmChatPrivadoCliente();
+            FormCharPrivado.Show();
 
         }
 

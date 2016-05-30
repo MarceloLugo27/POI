@@ -85,10 +85,16 @@
     <Compile Include="POI\Grupal Chat\Cliente\frmGrupalChatCliente.designer.cs">
       <DependentUpon>frmGrupalChatCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="POI\Private Chat\frmPrivateChatCliente.cs">
+    <Compile Include="POI\Private Chat 2\frmChatPrivadoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POI\Private Chat\frmPrivateChatCliente.Designer.cs">
+    <Compile Include="POI\Private Chat 2\frmChatPrivadoCliente.Designer.cs">
+      <DependentUpon>frmChatPrivadoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POI\Private Chat1\frmPrivateChatCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POI\Private Chat1\frmPrivateChatCliente.Designer.cs">
       <DependentUpon>frmPrivateChatCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="POI\Unused\frmSeleccionSubGrupos.cs">
@@ -112,7 +118,10 @@
     <EmbeddedResource Include="POI\Grupal Chat\Cliente\frmGrupalChatCliente.resx">
       <DependentUpon>frmGrupalChatCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POI\Private Chat\frmPrivateChatCliente.resx">
+    <EmbeddedResource Include="POI\Private Chat 2\frmChatPrivadoCliente.resx">
+      <DependentUpon>frmChatPrivadoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POI\Private Chat1\frmPrivateChatCliente.resx">
       <DependentUpon>frmPrivateChatCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POI\Unused\frmSeleccionSubGrupos.resx">

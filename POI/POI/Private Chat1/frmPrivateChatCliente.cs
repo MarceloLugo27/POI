@@ -141,7 +141,7 @@ namespace TcpClientProgram
             serveripTextbox.Text = cFunciones.GlobalstrIPChatPrivado;
             portTextbox.Text = cFunciones.GlobalintPuertoPrivado;
             userNameTextbox.Text = cFunciones.GlobalstrNombreUsuarioCliente;
-            totextbox.Text = cFunciones.GlobalstrIdNombreClienteDestino;
+            totextbox.Text = cFunciones.GlobalstrNombreClienteDestino;
 
             if (!isConnectedToServer)
             {
@@ -192,6 +192,8 @@ namespace TcpClientProgram
                     string message = data[2];
                     setClientMessage(source+" dice:"+" "+message);
                 }
+
+
 
             }
         }
@@ -274,7 +276,7 @@ namespace TcpClientProgram
             serveripTextbox.Text = cFunciones.GlobalstrIPChatPrivado;
             portTextbox.Text = cFunciones.GlobalintPuertoPrivado;
             userNameTextbox.Text = cFunciones.GlobalstrNombreUsuarioCliente;
-            totextbox.Text = cFunciones.GlobalstrIdNombreClienteDestino;
+            totextbox.Text = cFunciones.GlobalstrNombreClienteDestino;
 
             if (!isConnectedToServer)
             {
@@ -301,6 +303,7 @@ namespace TcpClientProgram
             {
 
             }
+
 
 
 
