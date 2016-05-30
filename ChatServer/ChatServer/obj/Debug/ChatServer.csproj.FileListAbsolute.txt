@@ -1,0 +1,20 @@
+C:\Users\Marcelo Lugo\Desktop\ChatServer\ChatServer\obj\Debug\ChatServer.exe
+C:\Users\Marcelo Lugo\Desktop\ChatServer\ChatServer\obj\Debug\ChatServer.pdb
+C:\Users\Marcelo\Desktop\POI ENTREGA FINAL VIATICOCOS\ChatServer\ChatServer\obj\Debug\ChatServer.exe
+C:\Users\Marcelo\Desktop\POI ENTREGA FINAL VIATICOCOS\ChatServer\ChatServer\obj\Debug\ChatServer.pdb
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.exe
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.pdb
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.Form1.resources
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.Properties.Resources.resources
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.csproj.GenerateResource.Cache
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\bin\Debug\ChatServer.exe
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\bin\Debug\ChatServer.pdb
+C:\Users\Marcelo Lugo\Desktop\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.csprojResolveAssemblyReference.cache
+E:\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.exe
+E:\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.pdb
+E:\POI CD\ChatServer\ChatServer\bin\Debug\ChatServer.exe
+E:\POI CD\ChatServer\ChatServer\bin\Debug\ChatServer.pdb
+E:\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.csprojResolveAssemblyReference.cache
+E:\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.Form1.resources
+E:\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.Properties.Resources.resources
+E:\POI CD\ChatServer\ChatServer\obj\Debug\ChatServer.csproj.GenerateResource.Cache
