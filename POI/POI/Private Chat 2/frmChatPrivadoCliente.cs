@@ -18,6 +18,7 @@ using NAudio.Wave;
 using NAudio.CoreAudioApi;
 using Funciones;
 using System.Drawing.Imaging;
+using System.Net.Mail;
 
 namespace TcpClientProgram
 
@@ -36,6 +37,7 @@ namespace TcpClientProgram
         //UdpClient sckRecive = new UdpClient(9050);
         Byte[] recives;
         Image imagen, imagen2;
+        string path = string.Empty;
 
         public frmChatPrivadoCliente()
         {
@@ -333,6 +335,55 @@ namespace TcpClientProgram
             }
         }
 
+        public void sendMail(string destinatario, string asunto, string adj)
+        {
+            MailMessage msg = new MailMessage();
+            //Quien escribe al correo
+            msg.From = new MailAddress("proyectos.lmad@gmail.com");
+            //A quien va dirigido
+            msg.To.Add(new MailAddress(destinatario));
+            //Asunto
+            msg.Subject = asunto;
+            //Contenido del correo
+            msg.Body = "holas";
+            //Adjuntamos archivo
+            msg.Attachments.Add(new Attachment(adj, System.Net.Mime.MediaTypeNames.Image.Jpeg));
+            //Servidor smtp de hotmail
+            msg.IsBodyHtml = true;
+
+            SmtpClient clienteSmtp = new SmtpClient();
+            clienteSmtp.Host = "smtp.gmail.com";
+            clienteSmtp.Port = 587;
+            clienteSmtp.EnableSsl = true;
+            clienteSmtp.UseDefaultCredentials = true;
+            //Se envia el correo
+            clienteSmtp.Credentials = new NetworkCredential("proyectos.lmad@gmail.com", "holas123");
+
+            try
+            {
+                clienteSmtp.Send(msg);
+                MessageBox.Show("Correo enviado");
+            }
+            catch (SmtpException ex)
+            {
+                MessageBox.Show("Error al enviar el correo " + ex.Message);
+            }
+        }
+
+        private void btnAdjuntar_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+
+
+            openFileDialog1.ShowDialog();
+            path = openFileDialog1.FileName;
+
+
+
+            lblArchivoAdjunto.Text = "Archivo:" + path;
+
+            sendMail("d_r_dedoverde@hotmail.com", "Proyecto POI", path);
+        }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -340,7 +391,7 @@ namespace TcpClientProgram
 
             while (true)
             {
-                IPEndPoint tempipep = new IPEndPoint(IPAddress.Any, 0);
+                IPEndPoint tempipep = new IPEndPoint(IPAddress.Any, 12446);
 
                 EndPoint temip = (EndPoint)tempipep;
 

@@ -56,6 +56,9 @@
             this.btnEnviarVideo = new System.Windows.Forms.Button();
             this.btnDetener = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnAdjuntar = new System.Windows.Forms.Button();
+            this.lblArchivoAdjunto = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -144,9 +147,9 @@
             this.groupBox1.Controls.Add(this.SendMsgButton);
             this.groupBox1.Controls.Add(this.totextbox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(24, 21);
+            this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 373);
+            this.groupBox1.Size = new System.Drawing.Size(381, 345);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ChatBox";
@@ -301,11 +304,36 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnAdjuntar
+            // 
+            this.btnAdjuntar.Location = new System.Drawing.Point(12, 372);
+            this.btnAdjuntar.Name = "btnAdjuntar";
+            this.btnAdjuntar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdjuntar.TabIndex = 21;
+            this.btnAdjuntar.Text = "Enviar";
+            this.btnAdjuntar.UseVisualStyleBackColor = true;
+            this.btnAdjuntar.Click += new System.EventHandler(this.btnAdjuntar_Click);
+            // 
+            // lblArchivoAdjunto
+            // 
+            this.lblArchivoAdjunto.AutoSize = true;
+            this.lblArchivoAdjunto.Location = new System.Drawing.Point(93, 377);
+            this.lblArchivoAdjunto.Name = "lblArchivoAdjunto";
+            this.lblArchivoAdjunto.Size = new System.Drawing.Size(89, 13);
+            this.lblArchivoAdjunto.TabIndex = 22;
+            this.lblArchivoAdjunto.Text = "lblArchivoAdjunto";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // frmChatPrivadoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 476);
+            this.Controls.Add(this.lblArchivoAdjunto);
+            this.Controls.Add(this.btnAdjuntar);
             this.Controls.Add(this.btnDetener);
             this.Controls.Add(this.btnEnviarVideo);
             this.Controls.Add(this.tbIP);
@@ -314,14 +342,14 @@
             this.Controls.Add(this.btnRecibirVideo);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.portTextbox);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.userNameTextbox);
             this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.serveripTextbox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.portTextbox);
+            this.Controls.Add(this.label6);
             this.Name = "frmChatPrivadoCliente";
             this.Text = "Tcp Client";
             this.Load += new System.EventHandler(this.frmChatPrivadoCliente_Load);
@@ -363,6 +391,9 @@
         private System.Windows.Forms.Button btnEnviarVideo;
         private System.Windows.Forms.Button btnDetener;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnAdjuntar;
+        private System.Windows.Forms.Label lblArchivoAdjunto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
