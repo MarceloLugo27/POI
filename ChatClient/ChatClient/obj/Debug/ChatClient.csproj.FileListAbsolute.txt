@@ -1,0 +1,2 @@
+C:\Users\Marcelo Lugo\Desktop\ChatClient\ChatClient\obj\Debug\ChatClient.exe
+C:\Users\Marcelo Lugo\Desktop\ChatClient\ChatClient\obj\Debug\ChatClient.pdb
